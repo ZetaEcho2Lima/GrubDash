@@ -141,11 +141,11 @@ function update(req, res) {
   res.status(200).json({ data: newOrder });
 }
 
-const destroy = (req, res) => {
+function destroy(req, res) {
   const index = orders.findIndex((order) => order.id === order.id);
   orders.splice(index, 1);
   res.sendStatus(204);
-};
+}
 
 module.exports = {
   list,
